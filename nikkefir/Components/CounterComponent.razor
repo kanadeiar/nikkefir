@@ -1,0 +1,12 @@
+<p role="status">Текущее показание: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Увеличить счетчик</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
