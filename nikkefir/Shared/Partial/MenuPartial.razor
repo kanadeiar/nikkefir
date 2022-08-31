@@ -15,20 +15,23 @@
         </ul>
         </li> *@
     <li class="nav-item">
-        <a class="nav-link" href="counter" @onclick="OnClickCallback">
+        <NavLink class="nav-link" href="counter" @onclick="OnClickCallback" ActiveClass="text-white">
             Счетчик
-        </a>
+        </NavLink>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="about" @onclick="OnClickCallback">
+        <NavLink class="nav-link" href="about" @onclick="OnClickCallback" ActiveClass="text-white">
             О приложении
-        </a>
+        </NavLink>
     </li>
 </ul>
 
 <div class="d-flex">
-    <NavLink class="btn btn-primary text-danger me-1" href="order" @onclick="OnClickCallback">
-        Заказать
+    <NavLink class="btn btn-info me-1" href="share" @onclick="OnClickCallback" ActiveClass="disabled">
+        Поделиться
+    </NavLink>
+    <NavLink class="btn btn-warning me-1" href="order" @onclick="OnClickCallback" ActiveClass="disabled">
+        Заказ
     </NavLink>
 </div>
 
