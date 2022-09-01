@@ -1,4 +1,5 @@
 @page "/images2020"
+@inject ImagesData ImagesData
 
 <PageTitle>Рисунки</PageTitle>
 
@@ -7,18 +8,45 @@
     <h1>Все рисунки за 2020 год</h1>
 
     <div class="mb-4">
+        <NavLink class="btn btn-info me-1" href="images2019">
+            Предидущие
+        </NavLink>
         <NavLink class="btn btn-info me-1" href="images2021">
             Следующие
         </NavLink>
     </div>
 
     <div class="row">
-
+        @foreach (var item in Images)
+        {
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <h5 class="card-header">@item.Name</h5>
+                    <NavLink href="@($"imageshow/{item.Id}")">
+                        <img src="@(item.Path)" class="card-img-top" alt="@(item.Name)" />
+                    </NavLink>
+                    <p class="card-body">Дата: @(item.Date.ToString("dd.MM.yyyy"))</p>
+                </div>
+            </div>
+        }
     </div>
 
     <div class="mb-4">
+        <NavLink class="btn btn-info me-1" href="images2019">
+            Предидущие
+        </NavLink>
         <NavLink class="btn btn-info me-1" href="images2021">
             Следующие
         </NavLink>
     </div>
 </div>
+
+@code {
+    public IEnumerable<Image> Images { get; set; }
+    protected override void OnParametersSet()
+    {
+        Images = ImagesData.GetImages()
+        .Where(x => x.Date.Year == 2020)
+        .OrderByDescending(x => x.Date);
+    }
+}

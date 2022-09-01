@@ -1,0 +1,13 @@
+@page "/imageshow/{id:int}"
+
+<img src="@(Path)" class="img-fluid" alt="@(Path)" />
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    public string Path { get; set; }
+    protected override void OnParametersSet()
+    {
+        Path = ImagesData.GetImages().First(x => x.Id == Id).Path!;
+    }
+}

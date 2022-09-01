@@ -1,12 +1,17 @@
-﻿@page "/"
+@page "/images2019"
+@inject ImagesData ImagesData
 
-<PageTitle>Главная</PageTitle>
+<PageTitle>Рисунки</PageTitle>
 
 <div class="border-1 bg-light shadow rounded-1 p-2">
 
-    <h1>Никольский кефир</h1>
+    <h1>Все рисунки за 2019 год</h1>
 
-    <p>Несколько самых лучших рисунков.</p>
+    <div class="mb-4">
+        <NavLink class="btn btn-info me-1" href="images2020">
+            Следующие
+        </NavLink>
+    </div>
 
     <div class="row">
         @foreach (var item in Images)
@@ -22,19 +27,20 @@
             </div>
         }
     </div>
+
+    <div class="mb-4">
+        <NavLink class="btn btn-info me-1" href="images2020">
+            Следующие
+        </NavLink>
+    </div>
 </div>
 
 @code {
     public IEnumerable<Image> Images { get; set; }
     protected override void OnParametersSet()
     {
-        var images = new List<Image>();
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Инвентаризация"));
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Сводка"));
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Счастье"));
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Идеал"));
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Рай"));
-        images.Add(ImagesData.GetImages().First(x => x.Name == "Мечта"));
-        Images = images;
+        Images = ImagesData.GetImages()
+        .Where(x => x.Date.Year == 2019)
+        .OrderByDescending(x => x.Date);
     }
 }
