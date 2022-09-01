@@ -1,23 +1,28 @@
 @inherits LayoutComponentBase
 
 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    @* <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Рисунки
+            aria-expanded="false">
+            Рисунки
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownInfo">
-        <li>
-        <a class="dropdown-item" href="counter" @onclick="OnClickCallback">
-        Последние
-        </a>
-        </li>
+            <li>
+                <a class="dropdown-item" href="images2022" @onclick="OnClickCallback">
+                    2022 год
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="images2021" @onclick="OnClickCallback">
+                    2021 год
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="images2020" @onclick="OnClickCallback">
+                    2020 год
+                </a>
+            </li>
         </ul>
-        </li> *@
-    <li class="nav-item">
-        <NavLink class="nav-link" href="images" @onclick="OnClickCallback" ActiveClass="text-white">
-            Рисунки
-        </NavLink>
     </li>
     <li class="nav-item">
         <NavLink class="nav-link" href="about" @onclick="OnClickCallback" ActiveClass="text-white">
