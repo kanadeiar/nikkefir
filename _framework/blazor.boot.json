@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Microsoft.AspNetCore.Components.dll": "sha256-FYoJMLeCew26b5MsW6JAhbpUOV15HClZTSFIuehSO0I=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-nMlgmJUbbOBU\/CXgmYDI2tuwQNIvABqOFkPeyt0sPPc=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-bxsed\/f9HGk8R07pPYy+tQtareorErblCp0tHBblkrE=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-GYLOrHTUilnmo\/diG\/ALfbWMvuvOGZ9MINsKLWtPjFc=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-zhFtW4kE16TdrpPne9I1Cu9o0KYzrS50VE9MVSifJg4=",
@@ -21,7 +21,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-YColTWA58whC+8aBjv1O7HgsyYrbHTba601EkNDWAlo=",
       "Microsoft.JSInterop.dll": "sha256-ibHooTkCokNojyjb08g0oKm1krbCNWhlna1qa8UJUsM=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-DI0RkZky47FtF3\/3VasOGjpMhrR+H3kb1cv\/2kzJoBQ=",
-      "nikkefir.dll": "sha256-ZIwrezpQG9Sfh9L6TQI+VPCCJDHabZkvdT1eflSPi7I=",
+      "nikkefir.dll": "sha256-ciYi8g+sLpNXlZmNjHHMCFeFERtR7AnYGjB9VucqRzw=",
       "System.Collections.Concurrent.dll": "sha256-lgc3AY6QxGIpEerdza6uSJnWz7P1hVxN+0OsWJU7c3M=",
       "System.Collections.dll": "sha256-+IqPTn4oflYNplJQxy7aHN4f7UvFvCy1EMQTUzxTq38=",
       "System.ComponentModel.dll": "sha256-Y7QpEAr46iJCel\/8FN7AMtoGLP6XzUGaef+1VzWxE\/0=",
