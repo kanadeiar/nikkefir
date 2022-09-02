@@ -1,7 +1,9 @@
 @page "/imageshow/{id:int}"
 @layout EmptyLayout
 
-<img src="@(Path)" class="img-fluid" alt="@(Path)" />
+<div class="mt-2">
+    <img src="@(Path)" class="img-fluid" alt="@(Path)" />
+</div>
 
 @code {
     [Parameter]
