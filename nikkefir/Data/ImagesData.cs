@@ -24,6 +24,8 @@ public class ImagesData
             },
             #endregion
 
+
+
             #region 2021
             new Image
             {
@@ -229,6 +231,8 @@ public class ImagesData
                 Path = "images/2021/Телеметрия.jpg",
             },
             #endregion
+
+
 
             #region 2020
             new Image
@@ -735,6 +739,411 @@ public class ImagesData
                 Name = "Электромобиль",
                 Path = "images/2020/Электромобиль.jpg",
             },
+            #endregion
+
+
+
+            #region 2019
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 30),
+                Name = "Айфон",
+                Path = "images/2019/Айфон.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 29),
+                Name = "Безопасность",
+                Path = "images/2019/Безопасность.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 30),
+                Name = "Весна цветная",
+                Path = "images/2019/Весна цветная.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 29),
+                Name = "Весна",
+                Path = "images/2019/Весна.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 12, 28),
+                Name = "Водитель",
+                Path = "images/2019/Водитель.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 12, 27),
+                Name = "Вопрос",
+                Path = "images/2019/Вопрос.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 11, 26),
+                Name = "Гламур",
+                Path = "images/2019/Гламур.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 11, 25),
+                Name = "Глонас",
+                Path = "images/2019/Глонас.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 11, 24),
+                Name = "Грибочки",
+                Path = "images/2019/Грибочки.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 11, 23),
+                Name = "Гусь",
+                Path = "images/2019/Гусь.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 22),
+                Name = "Добыча нефти",
+                Path = "images/2019/Добыча нефти.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Дом 2",
+                Path = "images/2019/Дом 2.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 22),
+                Name = "Домовой",
+                Path = "images/2019/Домовой.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 10, 21),
+                Name = "Жара",
+                Path = "images/2019/Жара.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 10, 22),
+                Name = "За рулем",
+                Path = "images/2019/За рулем.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 21),
+                Name = "Звезда",
+                Path = "images/2019/Звезда.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 22),
+                Name = "Змейка",
+                Path = "images/2019/Змейка.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 21),
+                Name = "Киберспорт",
+                Path = "images/2019/Киберспорт.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 22),
+                Name = "Кировец",
+                Path = "images/2019/Кировец.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 21),
+                Name = "Ляга",
+                Path = "images/2019/Ляга.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 09, 22),
+                Name = "Мамаша",
+                Path = "images/2019/Мамаша.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Медведь и гуси",
+                Path = "images/2019/Медведь и гуси.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 22),
+                Name = "Не курить",
+                Path = "images/2019/Не курить.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Новая машина",
+                Path = "images/2019/Новая машина.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 22),
+                Name = "Новый год",
+                Path = "images/2019/Новый год.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Обед",
+                Path = "images/2019/Обед.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 22),
+                Name = "Песик",
+                Path = "images/2019/Песик.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Печь",
+                Path = "images/2019/Печь.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 07, 22),
+                Name = "Пива",
+                Path = "images/2019/Пива.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 07, 21),
+                Name = "Пиво",
+                Path = "images/2019/Пиво.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 22),
+                Name = "Пляски",
+                Path = "images/2019/Пляски.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Польза курения",
+                Path = "images/2019/Польза курения.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 22),
+                Name = "Порядок",
+                Path = "images/2019/Порядок.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 21),
+                Name = "Праздник с папой",
+                Path = "images/2019/Праздник с папой.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 9),
+                Name = "Праздник",
+                Path = "images/2019/Праздник.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 10),
+                Name = "Презентация",
+                Path = "images/2019/Презентация.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 11),
+                Name = "Приветствие",
+                Path = "images/2019/Приветствие.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 05, 1),
+                Name = "Прогулка",
+                Path = "images/2019/Прогулка.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 04, 30),
+                Name = "Разговор",
+                Path = "images/2019/Разговор.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 03, 29),
+                Name = "РВС и хоккей",
+                Path = "images/2019/РВС и хоккей.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 02, 21),
+                Name = "Рыба",
+                Path = "images/2019/Рыба.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 01, 21),
+                Name = "Рыбалка",
+                Path = "images/2019/Рыбалка.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 01, 1),
+                Name = "Свадьба",
+                Path = "images/2019/Свадьба.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 01, 2),
+                Name = "Сигарета",
+                Path = "images/2019/Сигарета.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Стадии",
+                Path = "images/2019/Стадии.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Студент",
+                Path = "images/2019/Студент.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Током",
+                Path = "images/2019/Током.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Трасса",
+                Path = "images/2019/Трасса.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Три девицы",
+                Path = "images/2019/Три девицы.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Три оператора",
+                Path = "images/2019/Три оператора.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Футбол",
+                Path = "images/2019/Футбол.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Цветочки",
+                Path = "images/2019/Цветочки.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 08, 21),
+                Name = "Шаурма",
+                Path = "images/2019/Шаурма.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Шикарно",
+                Path = "images/2019/Шикарно.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 06, 21),
+                Name = "Шкаф телеметрии",
+                Path = "images/2019/Шкаф телеметрии.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 03, 21),
+                Name = "Шланг",
+                Path = "images/2019/Шланг.jpg",
+            },
+            new Image
+            {
+                Id = i++,
+                Date = new DateTime(2019, 03, 21),
+                Name = "Эстафета",
+                Path = "images/2019/Эстафета.jpg",
+            },
+
             #endregion
         };
         return images;
