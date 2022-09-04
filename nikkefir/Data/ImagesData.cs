@@ -11,6 +11,13 @@ public class ImagesData
             new Image
             {
                 Id = i++,
+                Date = new DateTime(2022, 09, 04),
+                Name = "Райки",
+                Path = "images/2022/Райки.png",
+            },
+            new Image
+            {
+                Id = i++,
                 Date = new DateTime(2022, 03, 02),
                 Name = "Мечта",
                 Path = "images/2022/Мечта.png",
