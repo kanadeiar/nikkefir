@@ -1,0 +1,17 @@
+@page "/imageshow/{id:int}"
+@inject ImagesService Service
+@layout EmptyLayout
+
+<div class="mt-2">
+    <img src="@(Path)" class="img-fluid" alt="@(Path)" />
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    public string? Path { get; set; } = default;
+    protected override async Task OnInitializedAsync()
+    {
+        Path = (await Service.GetImages())?.First(x => x.Id == Id)?.Path;
+    }
+}

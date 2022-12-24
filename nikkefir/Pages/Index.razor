@@ -1,9 +1,50 @@
 ﻿@page "/"
+@inject ImagesService Service
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Главная</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="border-1 bg-light shadow rounded-1 p-2">
 
-Welcome to your new app.
+    <h1>Никольский кефир</h1>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    @if (images is null)
+    {
+        <p><em>Загрузка рисунков...</em></p>
+    }
+    else
+    {
+        <p>Самые последние рисунки.</p>
+
+        <div class="row">
+            @foreach (var item in images)
+            {
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <h5 class="card-header">@item.Name</h5>
+                        <NavLink href="@($"imageshow/{item.Id}")">
+                            <img src="@(item.Path)" class="card-img-top" alt="@(item.Name)" />
+                        </NavLink>
+                        <p class="card-body">Дата публикации: @(item.Date.ToString("dd.MM.yyyy"))</p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    <div class="row m-1">
+        <NavLink class="btn btn-success me-1 p-3" href="order">
+            <i class="fas fa-cart-shopping"></i>
+            Заказать рисунок
+        </NavLink>
+    </div>
+</div>
+
+@code {
+    private IEnumerable<Image>? images;
+    protected override async Task OnInitializedAsync()
+    {
+        var names = new[] { "Инвентаризация", "Памятка", "Антипамятка", "Райки", "Сводка", "Счастье", "Мечта", "Идеал" };
+        images = (await Service.GetImages())
+        ?.Where(x => x.Date.Year >= 2021).Where(x => names.Contains(x.Name))
+        ?.OrderByDescending(x => x.Date);
+    }
+}
