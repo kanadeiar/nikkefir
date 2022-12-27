@@ -18,6 +18,7 @@ public class ImagesService
         var ind = 1;
         ind = await AddImagesToList(ind, "data/images2022.json");
         ind = await AddImagesToList(ind, "data/images2021.json");
+        ind = await AddImagesToList(ind, "data/images2020.json");
         return _images;
     }
 
