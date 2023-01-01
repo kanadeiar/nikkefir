@@ -1,11 +1,12 @@
+@page "/pics/{year:int}"
 @page "/pics"
 @inject IImagesService Service
 
-<PageTitle>Все рисунки</PageTitle>
+<PageTitle>@Name</PageTitle>
 
 <div class="border-1 bg-light shadow rounded-1 p-2">
 
-    <h1>Все рисунки</h1>
+    <h1>@Name</h1>
 
     @if (images is null)
     {
@@ -43,22 +44,36 @@
 </div>
 
 @code {
+    [Parameter]
+    public int? Year { get; set; }
     private IList<Image>? images;
     private Image[][]? chunks;
     private int chunkNumber = default;
+    private string Name => Year is null ? "Все рисунки" : $"Рисунки за {Year} год";
     private string? GetNextCssClass => chunkNumber < chunks?.Count() - 1 ? null : "collapse";
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
-        chunks = (await Service.GetImages())
-        ?.OrderByDescending(x => x.Date)?.Chunk(30).ToArray();
-        images = new List<Image>();
-        if (chunks?.ToArray()[chunkNumber] is { } first)
+        if (Year is null)
         {
-            foreach (var e in first)
+            chunks = (await Service.GetImages())
+            ?.OrderByDescending(x => x.Date)?.Chunk(30)?.ToArray();
+            images = new List<Image>();
+            if (chunks?.ToArray()[chunkNumber] is { } first)
             {
-                images.Add(e);
+                foreach (var e in first)
+                {
+                    images.Add(e);
+                }
             }
         }
+        else
+        {
+            chunks = default;
+            images = (await Service.GetImages())
+            ?.Where(x => x.Date.Year == Year)
+            ?.OrderByDescending(x => x.Date)?.ToArray();
+        }
+        chunkNumber = default;
     }
     private void GetNextPictures()
     {
