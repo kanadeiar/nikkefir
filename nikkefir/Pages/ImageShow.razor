@@ -2,16 +2,23 @@
 @inject IImagesService Service
 @layout EmptyLayout
 
+<PageTitle>@(Name) - Никольский кефир</PageTitle>
+
 <div class="mt-2">
-    <img src="@(Path)" class="img-fluid" alt="@(Path)" />
+    <img src="@(Path)" class="img-fluid" alt="@(Name)" />
 </div>
 
 @code {
     [Parameter]
     public int Id { get; set; }
+    public string? Name { get; set; } = default;
     public string? Path { get; set; } = default;
     protected override async Task OnInitializedAsync()
     {
-        Path = (await Service.GetImages())?.First(x => x.Id == Id)?.Path;
+        if ((await Service.GetImages())?.FirstOrDefault(x => x.Id == Id) is { } pic)
+        {
+            Name = pic.Name;
+            Path = pic.Path;
+        }
     }
 }
