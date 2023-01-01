@@ -1,8 +1,6 @@
-using System.Net.Http.Json;
-
 namespace nikkefir.Services;
 
-public class ImagesService
+public class ImagesService : IImagesService
 {
     private readonly HttpClient _httpClient;
     private IList<Image>? _images;
@@ -19,6 +17,7 @@ public class ImagesService
         ind = await AddImagesToList(ind, "data/images2022.json");
         ind = await AddImagesToList(ind, "data/images2021.json");
         ind = await AddImagesToList(ind, "data/images2020.json");
+        ind = await AddImagesToList(ind, "data/images2019.json");
         return _images;
     }
 

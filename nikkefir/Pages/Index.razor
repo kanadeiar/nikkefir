@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject ImagesService Service
+@inject IImagesService Service
 
 <PageTitle>Главная</PageTitle>
 
@@ -7,7 +7,7 @@
 
     <h1>Никольский кефир</h1>
 
-    @if (images is null)
+    @if (pics is null)
     {
         <p><em>Загрузка рисунков...</em></p>
     }
@@ -16,22 +16,28 @@
         <p>Самые последние рисунки.</p>
 
         <div class="row">
-            @foreach (var item in images)
+            @foreach (var pic in pics)
             {
                 <div class="col-lg-6">
                     <div class="card mb-4">
-                        <h5 class="card-header">@item.Name</h5>
-                        <NavLink href="@($"imageshow/{item.Id}")">
-                            <img src="@(item.Path)" class="card-img-top" alt="@(item.Name)" />
+                        <h5 class="card-header">@pic.Name</h5>
+                        <NavLink href="@($"imageshow/{pic.Id}")">
+                            <img src="@(pic.Path)" class="card-img-top" alt="@(pic.Name)" />
                         </NavLink>
-                        <p class="card-body">Дата публикации: @(item.Date.ToString("dd.MM.yyyy"))</p>
+                        <p class="card-body">Дата: @(pic.Date.ToString("dd.MM.yyyy"))</p>
                     </div>
                 </div>
             }
         </div>
     }
     <div class="row m-1">
-        <NavLink class="btn btn-success me-1 p-3" href="order">
+        <NavLink class="btn btn-success me-1 p-3" href="pics">
+            <i class="fas fa-angle-double-right"></i>
+            Еще
+        </NavLink>
+    </div>
+    <div class="row m-1">
+        <NavLink class="btn btn-warning me-1 p-3" href="order">
             <i class="fas fa-cart-shopping"></i>
             Заказать рисунок
         </NavLink>
@@ -39,11 +45,11 @@
 </div>
 
 @code {
-    private IEnumerable<Image>? images;
+    private IEnumerable<Image>? pics;
     protected override async Task OnInitializedAsync()
     {
         var names = new[] { "Инвентаризация", "Памятка", "Антипамятка", "Райки", "Сводка", "Счастье", "Мечта", "Идеал" };
-        images = (await Service.GetImages())
+        pics = (await Service.GetImages())
         ?.Where(x => x.Date.Year >= 2021).Where(x => names.Contains(x.Name))
         ?.OrderByDescending(x => x.Date);
     }
