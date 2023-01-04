@@ -1,0 +1,36 @@
+<div class="row flex-nowrap">
+    <div class="col-auto px-0 bg-light">
+        <div id="sidebar" class="collapse collapse-horizontal border-end">
+            <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
+                <NavLink href="pics" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar" Match="NavLinkMatch.All"><span style=" white-space: nowrap;">Все
+                        рисунки</span> </NavLink>
+                <NavLink href="pics/2023" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar"><span style=" white-space: nowrap;">2023 год</span> </NavLink>
+                <NavLink href="pics/2022" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar"><span style=" white-space: nowrap;">2022 год</span> </NavLink>
+                <NavLink href="pics/2021" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar"><span style=" white-space: nowrap;">2021 год</span> </NavLink>
+                <NavLink href="pics/2020" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar"><span style=" white-space: nowrap;">2020 год</span> </NavLink>
+                <NavLink href="pics/2019" class="list-group-item list-group-item-action d-inline-block"
+                    data-bs-parent="#sidebar"><span style=" white-space: nowrap;">2019 год</span> </NavLink>
+            </div>
+        </div>
+    </div>
+    <div class="col ps-md-2">
+        <a href="/" data-bs-target="#sidebar" data-bs-toggle="collapse" class="btn btn-light border text-dark mb-2"><i
+                class="fa fa-bars"></i>
+            Разделы</a>
+        <div class="row">
+            <div class="col-12">
+                @ChildContent
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}
