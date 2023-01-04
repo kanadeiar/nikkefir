@@ -10,37 +10,36 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/font-awesome/all.min.css" rel="stylesheet" />
-
-    <link href="nikkefir.styles.css" rel="stylesheet" />
+    <!-- <link href="nikkefir.styles.css" rel="stylesheet" /> -->
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" href="favicon.png" sizes="500x500">
-
-    <base href="/nikkefir/" />
-
-    <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+    <base href="/nikkefir/" />
+    <link href="manifest.json" rel="manifest" />
 
     <component type="typeof(HeadOutlet)" render-mode="WebAssemblyPrerendered" />
 </head>
 
 <body>
     <div id="app">
-        <div style="position:absolute; top:30vh; width:100%; text-align:center">
-            <h2>Никольский кефир</h2>
-            <div style="display:flex; gap:10px; justify-content:center; align-items:center">
-                <div class="spinner-border text-success" role="status"></div>
-                Загрузка, подождите ...
-            </div>
+        <div class="loading-title">
+            <h4>Никольский кефир</h4>
         </div>
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
     </div>
 
     <div id="blazor-error-ui">
         Обнаружена ошибка. Приложение требует перезагрузки.
         <a href="" class="btn btn-success reload">
-            Перезагрузить приложение
+            Перезагрузить
         </a>
         <a class="dismiss">🗙</a>
     </div>
@@ -49,7 +48,6 @@
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/font-awesome/all.min.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
-
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
