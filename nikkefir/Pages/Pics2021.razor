@@ -1,12 +1,12 @@
-@page "/pics"
+@page "/pics2021"
 @inject IImagesService Service
 
-<PageTitle>Все рисунки - Никольский кефир</PageTitle>
+<PageTitle>Рисунки за @year год - Никольский кефир</PageTitle>
 
 <SidebarPartial>
     <div class="border-1 bg-light shadow rounded-1 p-2">
 
-        <h1>Все рисунки</h1>
+        <h1>Рисунки за @year год</h1>
 
         @if (images is null)
         {
@@ -30,12 +30,6 @@
             </div>
         }
         <div class="row m-1">
-            <button class="btn btn-success me-1 p-3 @GetNextCssClass" @onclick="GetNextPictures">
-                <i class="fas fa-angle-double-right"></i>
-                Еще
-            </button>
-        </div>
-        <div class="row m-1">
             <NavLink class="btn btn-warning me-1 p-3" href="order">
                 <i class="fas fa-cart-shopping"></i>
                 Заказать рисунок
@@ -45,33 +39,11 @@
 </SidebarPartial>
 
 @code {
+    private int year = 2021;
     private IList<Image>? images;
-    private Image[][]? chunks;
-    private int chunkNumber = default;
-    private string? GetNextCssClass => chunkNumber < chunks?.Count() - 1 ? null : "collapse";
     protected override async Task OnParametersSetAsync()
     {
-        chunks = (await Service.GetImages())
-        ?.OrderByDescending(x => x.Date)?.Chunk(30)?.ToArray();
-        images = new List<Image>();
-        if (chunks?.ToArray()[chunkNumber] is { } first)
-        {
-            foreach (var e in first)
-            {
-                images.Add(e);
-            }
-        }
-        chunkNumber = default;
-    }
-    private void GetNextPictures()
-    {
-        chunkNumber++;
-        if (chunks?.ToArray()[chunkNumber] is { } next)
-        {
-            foreach (var e in next)
-            {
-                images?.Add(e);
-            }
-        }
+        images = (await Service.GetImages())
+        ?.OrderByDescending(x => x.Date).Where(x => x.Date.Year == year).ToArray();
     }
 }
