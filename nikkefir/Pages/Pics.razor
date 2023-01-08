@@ -23,7 +23,41 @@
                             <NavLink href="@($"imageshow/{item.Id}")">
                                 <img src="@(item.Path)" class="card-img-top" alt="@(item.Name)" />
                             </NavLink>
-                            <p class="card-body">Дата: @(item.Date.ToString("dd.MM.yyyy"))</p>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Дата: @(item.Date.ToString("dd.MM.yyyy"))
+                                </p>
+                            </div>
+                            @if (item.Vk != null || item.Ok != null || item.Telegram != null || item.Instagram != null)
+                            {
+                                <div class="card-footer text-muted">
+                                    Обсудить и поделиться:
+                                    @if (item.Vk is { } vk)
+                                    {
+                                        <a href="@(vk)" target="_blank" class="btn btn-primary btn-sm me-1">
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                    }
+                                    @if (item.Ok is { } ok)
+                                    {
+                                        <a href="@(ok)" target="_blank" class="btn btn-warning btn-sm me-1">
+                                            <i class="fab fa-odnoklassniki"></i>
+                                        </a>
+                                    }
+                                    @if (item.Telegram is { } tm)
+                                    {
+                                        <a href="@(tm)" target="_blank" class="btn btn-info btn-sm me-1">
+                                            <i class="fab fa-telegram"></i>
+                                        </a>
+                                    }
+                                    @if (item.Instagram is { } im)
+                                    {
+                                        <a href="@(im)" target="_blank" class="btn btn-dark btn-sm me-1">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    }
+                                </div>
+                            }
                         </div>
                     </div>
                 }

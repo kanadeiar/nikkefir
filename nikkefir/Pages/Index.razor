@@ -26,7 +26,41 @@
                         <NavLink href="@($"imageshow/{pic.Id}")">
                             <img src="@(pic.Path)" class="card-img-top" alt="@(pic.Name)" />
                         </NavLink>
-                        <p class="card-body">Дата: @(pic.Date.ToString("dd.MM.yyyy"))</p>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Дата: @(pic.Date.ToString("dd.MM.yyyy"))
+                            </p>
+                        </div>
+                        @if (pic.Vk != null || pic.Ok != null || pic.Telegram != null || pic.Instagram != null)
+                        {
+                            <div class="card-footer text-muted">
+                                Обсудить и поделиться:
+                                @if (pic.Vk is { } vk)
+                                {
+                                    <a href="@(vk)" target="_blank" class="btn btn-primary btn-sm me-1">
+                                        <i class="fab fa-vk"></i>
+                                    </a>
+                                }
+                                @if (pic.Ok is { } ok)
+                                {
+                                    <a href="@(ok)" target="_blank" class="btn btn-warning btn-sm me-1">
+                                        <i class="fab fa-odnoklassniki"></i>
+                                    </a>
+                                }
+                                @if (pic.Telegram is { } tm)
+                                {
+                                    <a href="@(tm)" target="_blank" class="btn btn-info btn-sm me-1">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                }
+                                @if (pic.Instagram is { } im)
+                                {
+                                    <a href="@(im)" target="_blank" class="btn btn-dark btn-sm me-1">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                }
+                            </div>
+                        }
                     </div>
                 </div>
             }
