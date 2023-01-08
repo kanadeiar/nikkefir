@@ -2,26 +2,42 @@
     {
         "date": "2022-09-04",
         "name": "Райки",
-        "path": "pics/2022/Райки.png"
+        "path": "pics/2022/Райки.png",
+        "vk": "https://vk.com/wall-218112835_10",
+        "ok": "https://ok.ru/group/70000001487674/topic/155180114060090",
+        "telegram": "https://t.me/nikkefir/9",
+        "instagram": "https://www.instagram.com/p/Cl_rGYnNPbi/"
     },
     {
         "date": "2022-12-20",
         "name": "Памятка",
-        "path": "pics/2022/Памятка.png"
+        "path": "pics/2022/Памятка.png",
+        "vk": "https://vk.com/wall-218112835_11",
+        "ok": "https://ok.ru/group/70000001487674/topic/155180114715450",
+        "telegram": "https://t.me/nikkefir/11",
+        "instagram": "https://www.instagram.com/p/CnKkMScNci7/"
     },
     {
         "date": "2022-12-01",
         "name": "Антипамятка",
-        "path": "pics/2022/Антипамятка.png"
+        "path": "pics/2022/Антипамятка.png",
+        "vk": "https://vk.com/wall-218112835_12",
+        "ok": "https://ok.ru/group/70000001487674/topic/155180115239738",
+        "telegram": "https://t.me/nikkefir/10",
+        "instagram": "https://www.instagram.com/p/CnKkXWlNvhj/"
     },
     {
         "date": "2022-03-02",
         "name": "Мечта",
-        "path": "pics/2022/Мечта.png"
+        "path": "pics/2022/Мечта.png",
+        "vk": "https://vk.com/wall-218112835_9",
+        "ok": "https://ok.ru/group/70000001487674/topic/155180111897402"
     },
     {
         "date": "2022-03-01",
         "name": "Идеал",
-        "path": "pics/2022/Идеал.png"
+        "path": "pics/2022/Идеал.png",
+        "vk": "https://vk.com/wall-218112835_8",
+        "ok": "https://ok.ru/group/70000001487674/topic/155180110652218"
     }
 ]
