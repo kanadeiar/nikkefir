@@ -14,6 +14,7 @@ public class ImagesService : IImagesService
             return _images;
         _images = new List<Image>();
         var ind = 1;
+        ind = await AddImagesToList(ind, "data/images2023.json");
         ind = await AddImagesToList(ind, "data/images2022.json");
         ind = await AddImagesToList(ind, "data/images2021.json");
         ind = await AddImagesToList(ind, "data/images2020.json");
