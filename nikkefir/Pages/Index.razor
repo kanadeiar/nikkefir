@@ -84,7 +84,7 @@
     private IEnumerable<Image>? pics;
     protected override async Task OnInitializedAsync()
     {
-        var names = new[] { "Инвентаризация", "Памятка", "Антипамятка", "Райки", "Сводка", "Счастье", "РазработчикТестировщик", "Идеал" };
+        var names = new[] { "Инвентаризация", "Памятка", "Антипамятка", "Райки", "Новый год", "Счастье", "РазработчикТестировщик", "Идеал" };
         pics = (await Service.GetImages())
         ?.Where(x => x.Date.Year >= 2021).Where(x => names.Contains(x.Name))
         ?.OrderByDescending(x => x.Date);
