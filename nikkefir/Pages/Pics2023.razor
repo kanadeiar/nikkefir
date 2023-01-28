@@ -50,6 +50,18 @@
                                             <i class="fab fa-telegram"></i>
                                         </a>
                                     }
+                                    @if (item.TikTok is { } tt)
+                                    {
+                                        <a href="@(tt)" target="_blank" class="btn btn-dark btn-sm me-1">
+                                            <i class="fab fa-tiktok"></i>
+                                        </a>
+                                    }
+                                    @if (item.YouTube is { } yt)
+                                    {
+                                        <a href="@(yt)" target="_blank" class="btn btn-danger btn-sm me-1">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    }
                                     @if (item.Instagram is { } im)
                                     {
                                         <a href="@(im)" target="_blank" class="btn btn-dark btn-sm me-1">

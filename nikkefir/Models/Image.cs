@@ -10,4 +10,6 @@ public class Image
     public string? Ok { get; set; }
     public string? Telegram { get; set; }
     public string? Instagram { get; set; }
+    public string? TikTok { get; set; }
+    public string? YouTube { get; set; }
 }

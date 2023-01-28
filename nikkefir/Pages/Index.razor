@@ -53,6 +53,18 @@
                                         <i class="fab fa-telegram"></i>
                                     </a>
                                 }
+                                @if (pic.TikTok is { } tt)
+                                {
+                                    <a href="@(tt)" target="_blank" class="btn btn-dark btn-sm me-1">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                }
+                                @if (pic.YouTube is { } yt)
+                                {
+                                    <a href="@(yt)" target="_blank" class="btn btn-danger btn-sm me-1">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                }
                                 @if (pic.Instagram is { } im)
                                 {
                                     <a href="@(im)" target="_blank" class="btn btn-dark btn-sm me-1">
@@ -84,7 +96,8 @@
     private IEnumerable<Image>? pics;
     protected override async Task OnInitializedAsync()
     {
-        var names = new[] { "Ромео и Джульетта", "Памятка", "Антипамятка", "Райки", "Новый год", "Счастье", "РазработчикТестировщик", "Идеал" };
+        var names = new[] { "Ромео и Джульетта", "Памятка", "Антипамятка", "Райки", "Новый год", "Счастье",
+"РазработчикТестировщик", "Идеал" };
         pics = (await Service.GetImages())
         ?.Where(x => x.Date.Year >= 2021).Where(x => names.Contains(x.Name))
         ?.OrderByDescending(x => x.Date);
