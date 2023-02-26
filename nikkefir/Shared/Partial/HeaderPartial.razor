@@ -3,34 +3,29 @@
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-dark bg-success border-bottom mb-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/nikkefir/" @onclick="SelectMenu">
+            <a class="navbar-brand" href="/nikkefir/" @onclick="ToggleNavMenu">
                 <img src="favicon.png" alt="Бренд" width="30" height="30" class="d-inline-block align-text-top">
             </a>
-            <a class="navbar-brand" href="/nikkefir/" @onclick="SelectMenu">
+            <a class="navbar-brand" href="/nikkefir/" @onclick="ToggleNavMenu">
                 Никольский кефир
             </a>
-            <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse @NavMenuCssClass">
-                <MenuPartial OnClickCallback="@SelectMenu" />
+            <div class="@NavMenuCssClass collapse navbar-collapse" id="navbarSupportedContent">
+                <MenuPartial OnClickCallback="@ToggleNavMenu" />
             </div>
         </div>
     </nav>
 </header>
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
+    private bool collapse;
+    private string? NavMenuCssClass => collapse ? "collapse" : null;
     private void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-    private void SelectMenu()
-    {
-        collapseNavMenu = true;
+        collapse = !collapse;
     }
 }
